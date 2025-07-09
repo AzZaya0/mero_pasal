@@ -1,13 +1,8 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Link from "next/link";
 
 export default function Home() {
-  
   return (
-   <>
-   <Link href={'/about'}  data="hgello"  > tep Me  </Link>
-   <Link href={'/contact'} > contact me   </Link>
-   </>
+    <>
+      <div className="text-3xl p-4 border border-red-500 "> this is the main page</div>
+    </>
   );
 }
