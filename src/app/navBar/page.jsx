@@ -1,12 +1,13 @@
 import React from "react";
+import { ShoppingCart, Heart, User } from "lucide-react";
 
 function NavBar() {
   return (
-    <div className="w-full  bg-cyan-100 text-[20px] z-50 fixed top-0">
-      <div className="max-w-[1200px] mx-auto flex justify-between items-center py-5 px-4">
+    <div className="w-full  text-[20px] z-50  top-0">
+      <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
         <h1 className="text-[26px] font-bold">cyber</h1>
 
-        <div className="w-[25rem] bg-white  p-2 flex justify-start items-center rounded-lg">
+        <div className="w-[22rem] bg-[#F5F5F5]  p-2 flex justify-start items-center rounded-lg">
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -21,21 +22,23 @@ function NavBar() {
           <input
             type="text"
             placeholder="Search"
-            className="ml-2 focus:outline-none"
+            className="ml-2 focus:outline-none bg-[#F5F5F5]
+            w-[25rem] placeholder-[#656565] text-[18px]
+            "
           />
         </div>
 
         <div className="flex space-x-8">
           <a href="">Home</a>
           <a href="">About</a>
-          <a href="">Contact</a>
+          <a href="">Contact Us</a>
           <a href="">Blog</a>
         </div>
 
-        <div className=" flex space-x-6">
-          <button>hi</button>
-          <button>bye</button>
-          <button>hello</button>
+        <div className=" flex space-x-10">
+          <Heart />
+          <ShoppingCart />
+          <User />
         </div>
       </div>
     </div>
