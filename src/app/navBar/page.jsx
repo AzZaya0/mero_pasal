@@ -1,14 +1,28 @@
+"use client";
+
 import React from "react";
 import { ShoppingCart, Heart, User } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function NavBar() {
+  const pathname = usePathname();
+
+  const links = [
+    { name: "home", path: "/" },
+    { name: "about", path: "/about" },
+    { name: "Contact Us", path: "/contact_us" },
+    { name: "Blog", path: "/blog" },
+    { name: "contact", path: "/contact" },
+  ];
   return (
     <div className="w-full  text-[20px] z-50  top-0">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
-        <h1 className="text-[26px] font-bold">cyber</h1>
+        <h1 className="text-[22px] font-bold">Mero Pasal</h1>
 
         <div className="w-[22rem] bg-[#F5F5F5]  p-2 flex justify-start items-center rounded-lg">
           <svg
+          className=" text-gray-600  mr-2"
             stroke="currentColor"
             fill="currentColor"
             strokeWidth="0"
@@ -23,22 +37,31 @@ function NavBar() {
             type="text"
             placeholder="Search"
             className="ml-2 focus:outline-none bg-[#F5F5F5]
-            w-[25rem] placeholder-[#656565] text-[18px]
+            w-[25rem] placeholder-[#656565] text-[16px]
             "
           />
         </div>
 
-        <div className="flex space-x-8">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact Us</a>
-          <a href="">Blog</a>
+        <div className="flex space-x-8 text-[16px] text-gray-400">
+          {links.map((link, index) => {
+            return (
+              <Link
+                href={link.path}
+                key={index}
+                className={`${
+                  link.path === pathname && "text-black  "
+                } capitalize font-medium hover:text-black`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className=" flex space-x-10">
-          <Heart />
-          <ShoppingCart />
-          <User />
+          <Heart size="20px" />
+          <ShoppingCart size="20px" />
+          <User size="20px" />
         </div>
       </div>
     </div>
