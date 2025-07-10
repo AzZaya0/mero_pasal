@@ -1,7 +1,9 @@
+import About from "./about";
+
 export default function Home() {
   return (
     <>
-      <div className="text-3xl border bg-[#211C24] h-[92.4vh] w-full ">
+      <div className="text-3xl border bg-[#211C24] h-[100vh] w-full ">
         <div className="m-auto max-w-[1200px]  flex flex-row justify-between items-center h-full">
           <div className="flex flex-col h-auto space-y-10 items-start ">
             <p className="text-[25px] text-[#909090] font-semibold">
@@ -21,6 +23,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <About />
     </>
   );
 }

@@ -7,16 +7,17 @@ import { usePathname } from "next/navigation";
 
 function NavBar() {
   const pathname = usePathname();
+  
 
   const links = [
     { name: "home", path: "/" },
-    { name: "about", path: "/about" },
+    { name: "about", path: "#about" },
     { name: "Contact Us", path: "/contact_us" },
     { name: "Blog", path: "/blog" },
     { name: "contact", path: "/contact" },
   ];
   return (
-    <div className="w-full  text-[20px] z-50  top-0">
+    <div className="w-full fixed bg-white  text-[20px] z-50  top-0">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
         <h1 className="text-[22px] font-bold">Mero Pasal</h1>
 
