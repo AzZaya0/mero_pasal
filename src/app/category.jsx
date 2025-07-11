@@ -36,7 +36,7 @@ function Category() {
             </button>
           </div>
         </div>
-        <div className="flex gap-[32px] overflow-x-auto ">
+        <div className="flex gap-[32px] overflow-x-auto scrollbar-hide ">
           {items.map((item, itemkey) => {
             const Iconn = item.icon;
             return (
