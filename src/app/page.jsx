@@ -1,11 +1,9 @@
-import About from "./about";
 
 import BentoGrid from "./widgets/bento";
 
 import Category from "./category";
 
 export default function Home() {
-  
   return (
     <>
       <div className="text-3xl border bg-[#211C24] h-[100vh] w-full ">
@@ -28,8 +26,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-<BentoGrid/>
-      <About />
+      <BentoGrid />
+      
 
       <Category />
     </>
