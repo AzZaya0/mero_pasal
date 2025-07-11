@@ -1,5 +1,6 @@
-import React from "react";
+"use client";  // enables user to allow use of the broswer side rendering components
 
+import React, { useRef } from "react";
 import {
   Phone,
   Watch,
@@ -21,22 +22,43 @@ function Category() {
     { name: "Gaming", icon: Gamepad2 },
     { name: "Gaming", icon: Gamepad2 },
   ];
+ 
+  const scrollHelper = useRef();
+
+  const scrollLeft = () => {
+    scrollHelper.current.scrollBy({ left: -200, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollHelper.current.scrollBy({ left: 200, behavior: "smooth" });
+  };
+
   return (
-    <section className=" w-full py-10">
+    <section className="w-full py-10">
       <div className="w-[1200px] mx-auto flex flex-col space-y-5">
-        <div className="justify-between flex flex-row">
+        <div className="flex justify-between items-center">
           <h1 className="font-semibold text-[20px]">Browse By Category</h1>
 
           <div className="flex gap-2">
-            <button className="p-2 hover:bg-gray-200 rounded-full">
+            <button
+              onClick={scrollLeft}
+              className="p-2 hover:bg-gray-200 rounded-full"
+            >
               <ChevronLeft />
             </button>
-            <button className="p-2 hover:bg-gray-200 rounded-full">
+            <button
+              onClick={scrollRight}
+              className="p-2 hover:bg-gray-200 rounded-full"
+            >
               <ChevronRight />
             </button>
           </div>
         </div>
-        <div className="flex gap-[32px] overflow-x-auto scrollbar-hide ">
+
+        <div
+          ref={scrollHelper}
+          className="flex gap-[32px] overflow-x-auto scrollbar-hide"
+        >
           {items.map((item, itemkey) => {
             const Iconn = item.icon;
             return (
