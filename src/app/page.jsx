@@ -1,4 +1,7 @@
-import About from "./about";
+
+import BentoGrid from "./widgets/bento";
+
+import Category from "./category";
 
 export default function Home() {
   return (
@@ -23,8 +26,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <BentoGrid />
+      
 
-      <About />
+      <Category />
     </>
   );
 }

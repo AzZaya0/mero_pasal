@@ -9,8 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        inter: ["var(--font-inter)"], // ✅ now usable in Tailwind
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+   
+  ],
 }
 
