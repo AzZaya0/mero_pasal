@@ -65,7 +65,7 @@ export default function BentoGrid() {
       </div>
 
       {/* 4. Vision Pro */}
-      <div className="bg-gray-900 text-white col-span-1 row-span-1 flex items-center ">
+      <div className="bg-[#353535] text-white col-span-1 row-span-1 flex items-center ">
         <Image
           src={appleVision }
           alt="Vision Pro"

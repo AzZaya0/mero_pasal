@@ -1,7 +1,8 @@
-
 import BentoGrid from "./widgets/bento";
 
 import Category from "./category";
+import ProductCard from "./widgets/product_card";
+import ProductSection from "./widgets/product_section";
 
 export default function Home() {
   return (
@@ -27,9 +28,9 @@ export default function Home() {
         </div>
       </div>
       <BentoGrid />
-      
 
       <Category />
+<ProductSection/>
     </>
   );
 }
