@@ -1,6 +1,8 @@
 "use client";
 import BentoGrid from "./widgets/bento";
 
+import Sale from "./sale";
+
 import Category from "./category";
 
 import ProductSection from "./widgets/product_section";
@@ -46,6 +48,8 @@ export default function Home() {
 
       <Category />
       <ProductSection />
+
+      <Sale />
     </>
   );
 }
