@@ -169,7 +169,7 @@ function ProductSection() {
               className={` ${
                 i === tabIndex && "underline underline-offset-8 text-black"
               }`}
-              key={i}
+              key={v}
             >
               {v}
             </h1>
