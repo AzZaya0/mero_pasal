@@ -7,6 +7,7 @@ import Category from "./category";
 
 import ProductSection from "./widgets/product_section";
 import { easeIn, motion } from "motion/react";
+import ProductCardGrid from "./widgets/image_container";
 export default function Home() {
   const initialAnimation = { y: 50, opacity: 0 };
   const animatetoTop = { y: 0, opacity: 1 };
@@ -45,10 +46,10 @@ export default function Home() {
         </div>
       </div>
       <BentoGrid />
-
       <Category />
       <ProductSection />
 
+      <ProductCardGrid />
       <Sale />
     </>
   );
