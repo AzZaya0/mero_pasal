@@ -4,6 +4,7 @@ import BentoGrid from "./widgets/bento";
 import Sale from "./widgets/sale";
 
 import Category from "./category";
+import Discounts from "./widgets/discounts";
 
 import ProductSection from "./widgets/product_section";
 import { easeIn, motion } from "motion/react";
@@ -50,6 +51,7 @@ export default function Home() {
       <ProductSection />
 
       <ProductCardGrid />
+      <Discounts />
       <Sale />
     </>
   );
