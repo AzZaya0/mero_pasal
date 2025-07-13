@@ -4,7 +4,7 @@ import React from "react";
 import { ShoppingCart, Heart, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import {motion} from 'motion/react'
 function NavBar() {
   const pathname = usePathname();
   
@@ -17,7 +17,11 @@ function NavBar() {
     { name: "contact", path: "/contact" },
   ];
   return (
-    <div className="w-full fixed bg-white  text-[20px] z-50  top-0">
+    <motion.div 
+    initial={{y:-100}}
+    animate={{y:0}}
+    transition={{ duration: 0.5,  }}
+    className="w-full fixed bg-white  text-[20px] z-50  top-0">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
         <h1 className="text-[22px] font-bold">Mero Pasal</h1>
 
@@ -46,7 +50,7 @@ function NavBar() {
         <div className="flex space-x-8 text-[16px] text-gray-400">
           {links.map((link, index) => {
             return (
-              <Link
+              < Link
                 href={link.path}
                 key={index}
                 className={`${
@@ -65,7 +69,7 @@ function NavBar() {
           <User size="20px" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
