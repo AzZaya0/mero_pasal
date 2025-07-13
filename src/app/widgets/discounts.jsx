@@ -35,13 +35,12 @@ function Discounts() {
       image: airpod,
       isFavorite: true,
     },
- 
   ];
 
   return (
     <section classname="w-full bg-gray-100 ">
       <div className="w-[1200px] mx-auto justify-start flex flex-col gap-6 pb-10">
-        <h1 className="font-semibold text-[20px]">Discounts</h1>
+        <h1 className="font-semibold text-[24px]">Discounts up to -50%</h1>
         <div className="flex gap-[32px] ">
           {products.map((item) => {
             return (
