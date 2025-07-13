@@ -22,7 +22,7 @@ export default function BentoGrid() {
     viewport: { amount: 0.4 },
   };
   return (
-    <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-full h-[720px] ">
+    <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-full h-[720px] overflow-hidden">
       {/* 1. PS5 */}
       <motion.div
         initial={fadeInLeft.initial}
@@ -46,12 +46,12 @@ export default function BentoGrid() {
 
       {/* 2. MacBook Air */}
       <motion.div
-       initial={fadeInRight.initial}
+        initial={fadeInRight.initial}
         whileInView={fadeInRight.whileInView}
         transition={fadeInRight.transition}
         viewport={fadeInRight.viewport}
-      
-      className="bg-gray-100 col-span-2 row-span-2 flex flex-row p-4  justify-center    items-center shadow-sm">
+        className="bg-gray-100 col-span-2 row-span-2 flex flex-row p-4  justify-center    items-center shadow-sm"
+      >
         <div className="flex-1 flex items-center justify-center ">
           <div className=" flex-col items-center justify-center space-y-6 ">
             <h2 className="text-[64px] font-thin leading-none  flex-grow ">
@@ -84,8 +84,8 @@ export default function BentoGrid() {
         whileInView={fadeInTop.whileInView}
         transition={fadeInTop.transition}
         viewport={fadeInTop.viewport}
-      
-      className="bg-gray-50 col-span-1 row-span-1 flex items-center ">
+        className="bg-gray-50 col-span-1 row-span-1 flex items-center "
+      >
         <Image
           src="/images/airpodmax.png"
           alt="AirPods Max"
@@ -104,11 +104,12 @@ export default function BentoGrid() {
 
       {/* 4. Vision Pro */}
       <motion.div
-            initial={fadeInTop.initial}
+        initial={fadeInTop.initial}
         whileInView={fadeInTop.whileInView}
-         transition={{ ...fadeInTop.transition, delay: 0.5 }}
+        transition={{ ...fadeInTop.transition, delay: 0.5 }}
         viewport={fadeInTop.viewport}
-      className="bg-[#353535] text-white col-span-1 row-span-1 flex items-center ">
+        className="bg-[#353535] text-white col-span-1 row-span-1 flex items-center "
+      >
         <Image src={appleVision} alt="Vision Pro" />
         <div className="ml-4">
           <h3 className="text-xl font-semibold">
