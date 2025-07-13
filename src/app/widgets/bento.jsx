@@ -7,19 +7,19 @@ export default function BentoGrid() {
     initial: { x: -100, opacity: 0 },
     whileInView: { x: 0, opacity: 1 },
     transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-    viewport: { amount: 0.4 },
+    viewport: { amount: 0.4, once: true },
   };
   const fadeInRight = {
     initial: { x: 100, opacity: 0 },
     whileInView: { x: 0, opacity: 1 },
     transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-    viewport: { amount: 0.4 },
+    viewport: { amount: 0.4, once: true },
   };
   const fadeInTop = {
     initial: { y: 100, opacity: 0 },
     whileInView: { y: 0, opacity: 1 },
     transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-    viewport: { amount: 0.4 },
+    viewport: { amount: 0.4, once: true },
   };
   return (
     <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-full h-[720px] overflow-hidden">
