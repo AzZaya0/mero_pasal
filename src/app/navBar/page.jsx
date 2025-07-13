@@ -65,7 +65,7 @@ function NavBar() {
 
         <div className=" flex space-x-10">
           <Heart size="20px" />
-          <ShoppingCart size="20px" />
+        <Link href={'/cart'}>  <ShoppingCart size="20px" /> </Link>
           <User size="20px" />
         </div>
       </div>
