@@ -1,7 +1,7 @@
 "use client";
 import BentoGrid from "./widgets/bento";
 
-import Sale from "./sale";
+import Sale from "./widgets/sale";
 
 import Category from "./category";
 
