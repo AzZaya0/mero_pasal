@@ -38,8 +38,8 @@ function Discounts() {
   ];
 
   return (
-    <section classname="w-full bg-gray-100">
-      <div className="w-[1200px] mx-auto justify-start flex flex-col gap-6 pb-10">
+    <section className="w-full bg-gray-100 pt-10">
+      <div className="w-[1200px] mx-auto items-start justify-start flex flex-col gap-6 pb-10">
         <h1 className="font-semibold text-[24px]">Discounts up to -50%</h1>
         <div className="flex gap-[32px] ">
           {products.map((item) => {
