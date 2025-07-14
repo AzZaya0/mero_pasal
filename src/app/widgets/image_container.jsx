@@ -11,6 +11,7 @@ const products = [
     image: samsungWatch,
     bg: "bg-white",
     text: "text-black",
+  
   },
   {
     title: "Ipad Pro",
