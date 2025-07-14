@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import CartLayout from "../widgets/cartLayout";
+import { motion } from "motion/react";
 
 function Cart() {
   const cartItems = [
@@ -19,11 +21,30 @@ function Cart() {
     },
   ];
 
+  const fadeInLeft = {
+    initial: { x: -100, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.1 },
+    viewport: { amount: 0.4, once: true },
+  };
+  const fadeInRight = {
+    initial: { x: 100, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.1 },
+    viewport: { amount: 0.4, once: true },
+  };
+
   return (
     <section className="text-lg text-black border border-white flex justify-center items-center  h-[100vh] w-full z-[60px] overflow-y-auto">
       <div className="max-w-[1200px] w-full mx-auto gap-24 flex flex-row  justify-between p-6">
         {/* Left: Cart Items */}
-        <div className="flex flex-col gap-4 w-[50%] ">
+        <motion.div
+          initial={fadeInLeft.initial}
+          whileInView={fadeInLeft.whileInView}
+          transition={fadeInLeft.transition}
+          viewport={fadeInLeft.viewport}
+          className="flex flex-col gap-4 w-[50%] "
+        >
           <h1 className="mb-4 text-[24px] font-semibold">Shopping Cart</h1>
           {cartItems.map((item, index) => (
             <CartLayout
@@ -35,10 +56,16 @@ function Cart() {
               price={item.price}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* Right: Order Summary */}
-        <div className="bg-white text-black p-4 border rounded flex flex-col w-[50%] px-16 py-14">
+        <motion.div
+          initial={fadeInRight.initial}
+          whileInView={fadeInRight.whileInView}
+          transition={fadeInRight.transition}
+          viewport={fadeInRight.viewport}
+          className="bg-white text-black p-4 border rounded flex flex-col w-[50%] px-16 py-14"
+        >
           <div>
             <h1 className="text-xl font-semibold mb-4">Order Summary</h1>
             <p className="text-[#545454] text-[14px] pt-[24px]">
@@ -77,7 +104,7 @@ function Cart() {
               Checkout
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
