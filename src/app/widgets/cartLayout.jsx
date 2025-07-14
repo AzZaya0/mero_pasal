@@ -5,8 +5,8 @@ const productImage = "/images/products/Iphone14.png";
 
 function CartLayout({ image, prodName, specs, serialNum, price }) {
   return (
-    <div className="py-2 pr-3 border-b-[1.5px] border-gray-500 flex flex-row ">
-      <div className="flex flex-row flex-1">
+    <div className="py-4 border-b-[1.5px] border-gray-500 flex flex-row ">
+      <div className="flex flex-row flex-1 py-3">
         <Image
           src={image !== "" ? image : productImage}
           height={100}
