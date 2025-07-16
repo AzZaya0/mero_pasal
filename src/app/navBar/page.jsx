@@ -25,7 +25,7 @@ function NavBar() {
       transition={{ duration: 0.5 }}
       className="w-full fixed bg-white text-[20px] z-50 top-0 shadow-sm"
     >
-      <div className="max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
+      <div className="lg:max-w-[1200px] mx-auto flex justify-between items-center py-4 px-4">
         {/* Logo and Hamburger */}
         <div className="flex items-center justify-between w-full lg:w-auto">
           <h1 className="text-[22px] font-bold">Mero Pasal</h1>
@@ -74,9 +74,11 @@ function NavBar() {
         </div>
 
         {/* Icons */}
-        <div className="hidden lg:flex space-x-6 text-gray-700">
+        <div className="hidden lg:flex space-x-6 text-gray-500">
           <Heart size="20px" />
-          <Link href={"/cart"}>
+          <Link href={"/cart"}  className={`${
+                 pathname=='/cart' && "text-black"
+              } capitalize font-medium hover:text-black`}  >
             <ShoppingCart size="20px" />
           </Link>
           <User size="20px" />
