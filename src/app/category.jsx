@@ -1,4 +1,4 @@
-"use client";  // enables user to allow use of the broswer side rendering components
+"use client"; // enables user to allow use of the broswer side rendering components
 
 import React, { useRef } from "react";
 import {
@@ -22,7 +22,7 @@ function Category() {
     { name: "Gaming", icon: Gamepad2 },
     { name: "Gaming", icon: Gamepad2 },
   ];
- 
+
   const scrollHelper = useRef();
 
   const scrollLeft = () => {
@@ -37,7 +37,9 @@ function Category() {
     <section className="w-full py-10 h-auto">
       <div className="md:w-[1200px]  py-10 mx-auto flex flex-col space-y-5">
         <div className="flex justify-between items-center">
-          <h1 className="font-semibold text-[20px]">Browse By Category</h1>
+          <h1 className=" px-10 sm:px-0 font-semibold text-[20px]">
+            Browse By Category
+          </h1>
 
           <div className="flex gap-2">
             <button
@@ -57,7 +59,7 @@ function Category() {
 
         <div
           ref={scrollHelper}
-          className="flex gap-[32px] overflow-x-auto scrollbar-hide"
+          className=" px-10 grid grid-cols-2 grid-rows-2 gap-4 sm:flex sm:gap-[32px] sm:overflow-x-auto scrollbar-hide"
         >
           {items.map((item, itemkey) => {
             const Iconn = item.icon;
