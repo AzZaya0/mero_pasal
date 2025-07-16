@@ -177,7 +177,7 @@ function ProductSection() {
         })}
       </div>
 
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center items-center lg:w-[1200px] md:mx-auto sm:mx-[56px] mx-auto mb-[56px]">
+      <div className="grid grid-cols-2   md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4 justify-items-center items-center lg:w-[1200px] md:mx-auto sm:mx-[56px] mx-auto mb-[56px]">
         {tabItem[tabIndex].map((value) => {
           return (
             <ProductCard
