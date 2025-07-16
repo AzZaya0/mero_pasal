@@ -22,7 +22,7 @@ export default function BentoGrid() {
     viewport: { amount: 0.4, once: true },
   };
   return (
-    <div className="grid grid-cols-4 grid-rows-2 gap-4 max-w-full h-[720px] overflow-hidden">
+    <div className="sm:grid flex flex-col  lg:grid-cols-4 grid-cols-2   grid-rows-2 gap-4 max-w-full  overflow-hidden">
       {/* 1. PS5 */}
       <motion.div
         initial={fadeInLeft.initial}

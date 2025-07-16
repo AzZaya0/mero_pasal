@@ -5,7 +5,7 @@ import productImage from "../../../public/images/products/Iphone14.png";
 
 function ProductCard({ name, price, isFavorite, image }) {
   return (
-    <div className="p-4  w-[268px]  bg-[#f6f6f6] rounded-md">
+    <div className="p-4  lg:w-[268px]  bg-[#f6f6f6] rounded-md">
       <Heart
         className={`ml-auto   ${
           isFavorite
@@ -20,7 +20,7 @@ function ProductCard({ name, price, isFavorite, image }) {
           alt="loading.."
           src={image !== "" ? image : productImage}
         />
-        <h1 className="mt-[16px] font-medium text-[16px] text-center">
+        <h1 className="mt-[16px] font-medium text-[16px] line-clamp-2 text-center">
           {name}
         </h1>
         <h1 className="mt-[16px] mb-[24px]  font-semibold text-[24px]">

@@ -159,7 +159,7 @@ function ProductSection() {
   const tabItem = [products, products1, products2];
   return (
     <>
-      <div className="flex w-[1200px] mx-auto text-[18px] font-medium  gap-8 text-gray-400 mb-8">
+      <div className="flex justify-center items-center lg:w-[1200px]  mx-auto text-[18px] font-medium  gap-8 text-gray-400 mb-8">
         {tab.map((v, i) => {
           return (
             <h1
@@ -177,7 +177,7 @@ function ProductSection() {
         })}
       </div>
 
-      <div className=" md:grid-cols-4  sm:grid-cols-2   grid grid-cols-1 gap-8   justify-center items-center md:w-[1200px]  md:mx-auto  sm:mx-[56px] mx-auto  mb-[56px]">
+      <div className="grid grid-cols-2   md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4 justify-items-center items-center lg:w-[1200px] md:mx-auto sm:mx-[56px] mx-auto mb-[56px]">
         {tabItem[tabIndex].map((value) => {
           return (
             <ProductCard
