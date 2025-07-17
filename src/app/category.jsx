@@ -35,7 +35,7 @@ function Category() {
 
   return (
     <section className="w-full py-10 h-auto">
-      <div className="md:w-[1200px]  py-10 mx-auto flex flex-col space-y-5">
+      <div className="max-w-[1200px]  py-10 mx-auto flex flex-col space-y-5">
         <div className="flex justify-between items-center">
           <h1 className=" px-10 sm:px-0 font-semibold text-[20px]">
             Browse By Category

@@ -39,7 +39,7 @@ export default function ProductCardGrid() {
         {products.map((item, index) => (
           <div
             key={index}
-            className={` h-full p-6 flex flex-col items-center  justify-between sm:items-start ${item.bg} ${item.text} `}
+            className={` h-full p-6 flex flex-col items-center  justify-between md:items-start ${item.bg} ${item.text} `}
           >
             <div className=" relative w-full h-[200px] sm:h-[240px] md:h-[280px] my-[60px]">
               <Image

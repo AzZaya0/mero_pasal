@@ -39,20 +39,18 @@ function Discounts() {
 
   return (
     <section className="w-full bg-gray-100 pt-10">
-      <div className="w-[1200px] mx-auto items-start justify-start flex flex-col gap-6 pb-10">
-        <h1 className="font-semibold text-[24px]">Discounts up to -50%</h1>
-        <div className="flex gap-[32px] ">
-          {products.map((item) => {
-            return (
-              <ProductCard
-                key={item.id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                isFavorite={item.isFavorite}
-              />
-            );
-          })}
+      <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col gap-6 pb-10">
+        <h1 className="font-semibold text-2xl">Discounts up to -50%</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-x-6 gap-y-8">
+          {products.map((item) => (
+            <ProductCard
+              key={item.id}
+              image={item.image}
+              name={item.name}
+              price={item.price}
+              isFavorite={item.isFavorite}
+            />
+          ))}
         </div>
       </div>
     </section>

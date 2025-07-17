@@ -20,7 +20,7 @@ export default function Home() {
       <ProductSection />
 
       <ProductCardGrid />
-      {/* <Discounts /> */}
+      <Discounts />
       <Sale />
     </>
   );
