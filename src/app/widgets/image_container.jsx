@@ -11,7 +11,6 @@ const products = [
     image: samsungWatch,
     bg: "bg-white",
     text: "text-black",
-  
   },
   {
     title: "Ipad Pro",
@@ -36,13 +35,13 @@ const products = [
 export default function ProductCardGrid() {
   return (
     <section className="w-full px-4 py-16">
-      <div className="w-full h-[640px] max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 ">
+      <div className="w-full max-w-full mx-auto grid grid-cols-1 sm:grid-cols-1 sm:grid-row-1 md:grid-cols-2 lg:grid-cols-4 ">
         {products.map((item, index) => (
           <div
             key={index}
-            className={`w-full h-full p-6 flex flex-col justify-between items-start ${item.bg} ${item.text} `}
+            className={` h-full p-6 flex flex-col items-center  justify-between sm:items-start ${item.bg} ${item.text} `}
           >
-            <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] my-[60px]">
+            <div className=" relative w-full h-[200px] sm:h-[240px] md:h-[280px] my-[60px]">
               <Image
                 src={item.image}
                 alt={item.title}

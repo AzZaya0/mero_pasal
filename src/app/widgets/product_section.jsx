@@ -159,7 +159,7 @@ function ProductSection() {
   const tabItem = [products, products1, products2];
   return (
     <>
-      <div className="flex justify-center items-center lg:w-[1200px]  mx-auto text-[18px] font-medium  gap-8 text-gray-400 mb-8">
+      <div className="flex justify-center items-center lg:w-[1200px]  mx-auto text-[18px] font-medium cursor-pointer  gap-8 text-gray-400 mb-8">
         {tab.map((v, i) => {
           return (
             <h1
