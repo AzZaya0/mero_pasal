@@ -2,6 +2,7 @@
 import React from "react";
 import CartLayout from "../widgets/cartLayout";
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 function Cart() {
   const cartItems = [
@@ -34,6 +35,7 @@ function Cart() {
     viewport: { amount: 0.4, once: true },
   };
 
+  const router = useRouter();
   return (
     <section className="text-lg text-black border border-white flex justify-center items-center  h-[100vh] w-full z-[60px] overflow-y-auto">
       <div className="max-w-[1200px] w-full mx-auto flex flex-col lg:flex-row gap-20">
@@ -103,7 +105,10 @@ function Cart() {
             </div>
           </div>
 
-          <button className="bg-black w-full text-white text-base font-medium py-3 px-4 rounded mt-6">
+          <button
+            onClick={() => router.push("/cart/checkout")}
+            className="bg-black w-full text-white text-base font-medium py-3 px-4 rounded mt-6"
+          >
             Checkout
           </button>
         </motion.div>
