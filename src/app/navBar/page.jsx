@@ -13,8 +13,7 @@ function NavBar() {
   const links = [
     { name: "home", path: "/" },
     { name: "about", path: "#about" },
-    { name: "Contact Us", path: "/contact_us" },
-    { name: "Blog", path: "/blog" },
+
     { name: "contact", path: "/contact" },
   ];
 
@@ -76,9 +75,12 @@ function NavBar() {
         {/* Icons */}
         <div className="hidden lg:flex space-x-6 text-gray-500">
           <Heart size="20px" />
-          <Link href={"/cart"}  className={`${
-                 pathname=='/cart' && "text-black"
-              } capitalize font-medium hover:text-black`}  >
+          <Link
+            href={"/cart"}
+            className={`${
+              pathname == "/cart" && "text-black"
+            } capitalize font-medium hover:text-black`}
+          >
             <ShoppingCart size="20px" />
           </Link>
           <User size="20px" />
