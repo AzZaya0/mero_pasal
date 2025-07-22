@@ -51,7 +51,7 @@ export default function payout({ prevStep }) {
         </button>
       </div>
 
-      <div className="flex justify-between mt-6">
+      <div className="flex justify-end gap-10 mt-6">
         <button className="px-4 py-2 border rounded" onClick={prevStep}>
           Back
         </button>
