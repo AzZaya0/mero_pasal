@@ -1,4 +1,4 @@
-import {Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./navBar/page";
 import Footer from "./footer";

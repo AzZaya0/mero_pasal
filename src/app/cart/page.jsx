@@ -2,7 +2,7 @@
 import React from "react";
 import CartLayout from "../widgets/cartLayout";
 import { motion } from "motion/react";
-
+import appleWatch from "../../../public/images/products/apple_watch.png";
 function Cart() {
   const cartItems = [
     {
@@ -19,6 +19,14 @@ function Cart() {
       serialNum: "SN: 9876543210",
       price: "$850",
     },
+    {
+      image: appleWatch,
+      prodName:"Apple Watch Series 9 GPS 41mm Starlight Aluminium",
+      specs: "256GB Blue",
+      serialNum: "SN: 9876543210",
+      price: "$366",
+    },
+     
   ];
 
   const fadeInLeft = {
